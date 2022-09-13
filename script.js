@@ -1,3 +1,1 @@
-getComputerChoice() {
-    if playerSelection
-}
+getComputerChoice(){}

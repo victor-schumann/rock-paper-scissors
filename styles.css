@@ -73,8 +73,28 @@
 
 .game {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: column;
+    height: 90vh;
+
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+.header button{
+    background: none;
+    box-shadow:none;
+    border: none;
+    outline: none;
+}
+
 .selections {
     display: flex;
     justify-content: center;
@@ -96,4 +116,10 @@
 .results {
         display: flex;
         justify-content: space-between;
+}
+
+.log {
+    width: 100%;
+    height: 20vh;
+
 }
