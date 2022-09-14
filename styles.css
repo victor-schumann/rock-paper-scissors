@@ -45,8 +45,6 @@ body {
   font-family: monospace;
   box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.2);
   /**this is a neat property. It allows us to give a shadow to a given <div>**/
-  white-space: pre-wrap;
-  /**reminder: Sequences of whitespace will collapse into a single whitespace. Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered.**/
   outline: 0;
   margin: 1vh 0.5vw;
   text-align: center;
@@ -61,6 +59,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 
 .selections {
@@ -82,26 +81,11 @@ body {
 }
 
 .results {
-  margin-top: 1rem;
-  display: grid;
-  width: 50%;
-  grid-template-columns: repeat(2, 1fr);
-  border: 2px solid red;
+  display:block;
+  border: 2px green solid;
 }
 
-.result-score {
-  margin-left: .1rem;
-  font-size: 2rem;
-}
 
-.result-selection {
-  opacity: .5;
-}
-
-.result-selection.winner {
-  opacity: 1;
-  font-size: 1.5rem;
-}
 
 .footer{
   height: 12.5vh;
