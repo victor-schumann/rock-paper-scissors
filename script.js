@@ -5,32 +5,20 @@ const yourScoreSpan = document.querySelector('[data-your-score]')
 const SELECTIONS = [
   {
     name: 'rock',
-    emoji: '✊',
+    code: '✊',
     beats: 'scissors'
   },
   {
     name: 'paper',
-    emoji: '✋',
+    code: '✋',
     beats: 'rock'
   },
   {
     name: 'scissors',
-    emoji: '✌',
+    code: '✌',
     beats: 'paper'
   }
 ]
-
-/* var aaa = "http://i.imgur.com/ZLAfFHN.jpg";
-aaa = createimg(aaa,80,80)
-
-function createimg(key,sizeA,sizeB) {
-    var theimage = document.createElement("img");
-    theimage.setAttribute('src', key);
-    theimage.setAttribute('alt', 'image');
-    theimage.height = sizeA;
-    theimage.width = sizeB;
-    document.body.appendChild(theimage);  
-    } */
 
 selectionButtons.forEach(selectionButton => {
   selectionButton.addEventListener('click', e => {
@@ -56,14 +44,6 @@ function incrementScore(scoreSpan) {
   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
 
-function addSelectionResult(selection, winner) {
-  const div = document.createElement('div')
-  div.innerText = selection.emoji
-  div.classList.add('result-selection')
-  if (winner) div.classList.add('winner')
-  finalColumn.after(div)
-}
-
 function isWinner(selection, opponentSelection) {
   return selection.beats === opponentSelection.name
 }
@@ -71,4 +51,18 @@ function isWinner(selection, opponentSelection) {
 function randomSelection() {
   const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
   return SELECTIONS[randomIndex]
+}
+
+/* Currently having difficulties with the following function. I want to use the .game images instead of emojis, but I'm not having any luck with it. My current attempt goes around changing "div.innerText" to this:
+
+  const classes = winner ? 'img-style winner' : 'img-style");
+  div.innerHTML="<img src=\'https://domain.com/adv/banner.jpg\' width=\'400px\' height=\'150px\'>";
+*/
+
+function addSelectionResult(selection, winner) {
+  const div = document.createElement('div')
+  div.innerText = selection.code
+  div.classList.add('result-selection')
+  if (winner) div.classList.add('winner')
+  finalColumn.after(div)
 }
