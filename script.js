@@ -1,17 +1,17 @@
-/* First, let's get the choises and results using 'getElementBy' */
+/* First, let's get the id/buttons we want */
+const selectionButtons = document.querySelectorAll('[data-selection]')
 
-const computerChoiceDIsplay = document.getElementsByClassName('computer-choice')
-const userChoiceDisplay = document.getElementsByClassName('user-choice')
-const resultDisplayPc = document.getElementsByClassName('result-score-pc')
-const resultDisplayYou = document.getElementsByClassName('result-score-you')
-let userChoice
+/* Create a function that displays the given selection */
+function makeSelection(selection) {
+    console.log(selection)
+}
 
-/* Now, game buttons! */
-const possibleChoices = document.querySelectorAll('selection')
-
-/* Now, whenever I click on any of the possible choices, I want to know which button it was. To do that, let's use add.EventListener and same the id somewhere */
-
-possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-    userChoice = e.target.class
-    userChoiceDisplay.innerHTML = userChoice
-}))
+/* 1. For each selection button, attribute an event on click;
+2. On click, take an event and ge the name from the button's data-selection;
+3. Store the data-selection on a variable and display it with the previously created function */
+selectionButtons.forEach(selectionButton => {
+    selectionButton.addEventListener('click', e => {
+        const selectionName = selectionButton.dataset.selection
+        makeSelection(selectionName)
+    })
+})
