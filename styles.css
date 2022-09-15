@@ -13,6 +13,10 @@ body {
   background-color: #000000;
 }
 
+.selection-h img {
+  height: 5vh;
+}
+
 .title, .footer {
   text-align: center;
   line-height: 12.5vh;
@@ -75,7 +79,7 @@ body {
 
 }
 
-.selection {
+.selection, .selection-h {
   background: none;
   border: none;
   outline: none;
@@ -87,6 +91,10 @@ body {
 
 .selection:hover {
   transform: scale(1.2);
+}
+
+.selection-h:hover {
+  transform: scale(1.2)
 }
 
 .results {
