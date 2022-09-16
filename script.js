@@ -5,17 +5,17 @@ const yourScoreSpan = document.querySelector('[data-your-score]')
 const SELECTIONS = [
   {
     name: 'rock',
-    code: '✊',
+    code: '🪨',
     beats: 'scissors'
   },
   {
     name: 'paper',
-    code: '✋',
+    code: '📄',
     beats: 'rock'
   },
   {
     name: 'scissors',
-    code: '✌',
+    code: '✂️',
     beats: 'paper'
   }
 ]
